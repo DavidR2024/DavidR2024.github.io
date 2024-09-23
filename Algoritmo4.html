@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serie de Fibonacci con Operaciones</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h1 {
+            color: #007bff;
+        }
+        .container {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            max-width: 600px;
+            width: 100%;
+        }
+        label {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            display: block;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1em;
+        }
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .output {
+            margin-top: 20px;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+        .error {
+            color: #dc3545;
+        }
+    </style>
+</head>
+<body>
+    <p><a href= "index.html">Regresar al menu</a> <br></p>
+    <div class="container">
+        <h1>Generador de Serie de Fibonacci</h1>
+        <label for="limite">Ingrese el límite:</label>
+        <input type="number" id="limite" min="1" placeholder="Ingrese un número positivo">
+        <button onclick="calcularFibonacci()">Generar Fibonacci</button>
+        <div class="output" id="output"></div>
+    </div>
+
+    <script>
+        function calcularFibonacci() {
+            let limite = parseInt(document.getElementById("limite").value);
+            let outputDiv = document.getElementById("output");
+
+            if (isNaN(limite) || limite <= 0) {
+                outputDiv.innerHTML = "<p class='error'>Por favor, ingrese un número positivo.</p>";
+                return;
+            }
+
+            let fib = [0, 1];
+            let operaciones = "Operaciones realizadas:<br>";
+            operaciones += "0<br>1<br>";
+            
+            while (true) {
+                let siguiente = fib[fib.length - 1] + fib[fib.length - 2];
+                if (siguiente > limite) break;
+                operaciones += `${fib[fib.length - 1]} + ${fib[fib.length - 2]} = ${siguiente}<br>`;
+                fib.push(siguiente);
+            }
+
+            let resultado = "Serie de Fibonacci hasta " + limite + ":<br>";
+            resultado += fib.join(", ");
+            
+            outputDiv.innerHTML = operaciones + "<br>" + resultado;
+        }
+    </script>
+</body>
+</html>

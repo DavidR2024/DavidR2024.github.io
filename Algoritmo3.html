@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números Pares Elevados al Cubo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .container {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            max-width: 600px;
+            width: 100%;
+        }
+        h1 {
+            color: #ff6600;
+        }
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .output {
+            margin-top: 20px;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <p><a href= "index.html">Regresar al menu</a> <br></p>
+    <div class="container">
+        <h1>Primeros 5 Números Pares Elevados al Cubo</h1>
+        <button onclick="mostrarCubos()">Calcular</button>
+        <div class="output" id="output"></div>
+    </div>
+
+    <script>
+        function mostrarCubos() {
+            let outputDiv = document.getElementById("output");
+            let resultado = "";
+            let numPares = 5;
+
+            for (let i = 1; i <= numPares; i++) {
+                let numeroPar = i * 2;
+                let cubo = Math.pow(numeroPar, 3);
+                resultado += `${numeroPar} al cubo es ${cubo}<br>`;
+            }
+
+            outputDiv.innerHTML = resultado;
+        }
+    </script>
+</body>
+</html>
