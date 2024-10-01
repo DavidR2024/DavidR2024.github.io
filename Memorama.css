@@ -1,0 +1,96 @@
+/* Estilo general */
+body {
+    background-color: #e6f7ff; /* Color de fondo suave */
+    text-align: center;
+    font-family: 'Roboto', sans-serif; /* Fuente más moderna */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+table {
+    margin: 20px auto;
+    border-spacing: 15px; /* Mayor espaciado entre celdas */
+}
+
+td {
+    padding: 10px;
+}
+
+.imagen {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra más sutil */
+}
+
+.imagen:hover {
+    transform: scale(1.15);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Efecto más llamativo al hover */
+}
+
+#tabla {
+    background-color: #ffffff;
+    border: 2px solid #004080;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Sombra para mayor profundidad */
+    max-width: 500px; /* Limitar el ancho del tablero */
+}
+
+/* Contador de pares encontrados */
+h1#contador {
+    font-size: 28px;
+    color: #004080;
+    margin: 20px 0;
+}
+
+/* Botón de reinicio */
+input[type="button"] {
+    padding: 12px 30px;
+    font-size: 18px;
+    background-color: #007acc;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.4s ease, transform 0.3s ease;
+}
+
+input[type="button"]:hover {
+    background-color: #005999;
+    transform: scale(1.05); /* Pequeño efecto de ampliación */
+}
+
+input[type="button"]:active {
+    transform: scale(1); /* Elimina el zoom al hacer clic */
+}
+
+/* Texto adicional */
+p#Salida {
+    margin-top: 20px;
+    font-style: italic;
+    color: #666666;
+}
+
+/* Estilo responsive */
+@media (max-width: 768px) {
+    .imagen {
+        width: 80px;
+        height: 80px;
+    }
+    
+    #tabla {
+        max-width: 90%;
+    }
+    
+    input[type="button"] {
+        width: 80%;
+        font-size: 16px;
+    }
+}
