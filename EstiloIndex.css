@@ -92,7 +92,7 @@ section {
 }
 
 /* Botones o enlaces de juegos */
-a[href*="Memorama"], a[href*="tictactoe"] {
+a[href*="Memorama"], a[href*="tictactoe"], a[href*="stack"] {
     background-color: #27ae60;
     color: #fff;
     padding: 10px 15px;
@@ -100,6 +100,6 @@ a[href*="Memorama"], a[href*="tictactoe"] {
     text-transform: uppercase;
 }
 
-a[href*="Memorama"]:hover, a[href*="tictactoe"]:hover {
+a[href*="Memorama"]:hover, a[href*="tictactoe"]:hover, a[href*="stack"]:hover {
     background-color: #2ecc71;
 }
