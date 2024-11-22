@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cifrado César</title>
+    <link rel="stylesheet" href="cesar_2ofuscado.css">
+    <script src="cesar_2Ofuscado.js"></script>
+</head>
+<body onload="cargar()">
+    <h1>Algoritmo de Cifrado César</h1>
+    </html><p><a href= "index.html">Regresar al menu</a> <br></p>
+
+    <div class="contenedor-mensajes">
+        <div>
+            <p>Mensaje cifrado:</p>
+            <textarea id="mensajeCifrado" rows="20" readonly></textarea>
+        </div>
+        <div>
+            <p>Mensaje Original:</p>
+            <textarea id="mensajeOriginal" rows="20" readonly></textarea>
+        </div>
+    </div>
+
+    <p>Clave:</p>
+    <select id="clave1" disabled>
+        <option value="">--</option>
+    </select>
+    <select id="clave2" disabled>
+        <option value="">--</option>
+    </select>
+    <select id="clave3" disabled>
+        <option value="">--</option>
+    </select>
+    <select id="clave4" disabled>
+        <option value="">--</option>
+    </select>
+    <select id="clave5" disabled>
+        <option value="">--</option>
+    </select>
+    <select id="clave6" disabled>
+        <option value="">--</option>
+    </select>
+
+    <input type="button" value="Limpiar" onclick="reiniciar()">
+
+    <input type="file" id="archivoClave" accept=".txt" style="display: none;"> 
+    <input type="button" value="Cargar Clave" onclick="document.getElementById('archivoClave').click()">
+
+    <input type="file" id="archivoCifrado" accept=".txt" style="display: none;"> 
+    <input type="button" value="Cargar Archivo Cifrado" onclick="document.getElementById('archivoCifrado').click()">
+    
+    <input type="button" value="Descifrar" onclick="descifrar()">
+
+    <input type="button" value="Guardar Mensaje Descifrado" onclick="guardarMensaje()">
+
+</body>
+</html>

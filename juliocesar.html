@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cifrado de cesar</title>
+    <script src="juliocesaroduscado.js"></script>
+    <link rel="stylesheet" href="juliocesaroduscado.css">
+</head>
+<body onload="opcionClave()">
+    <h1>Algoritmo cifrado de cesar</h1>
+    </html><p><a href= "index.html">Regresar al menu</a> <br></p>
+    <p>Mensaje: </p>
+    <textarea name="" id="mensajeOriginal" rows="20" onkeydown="permitir(event)" onkeyup="capitalizar(this)"></textarea><br>
+    <p>clave:</p>
+    <select name="" id="clave1"></select>
+    <select name="" id="clave2"></select>
+    <select name="" id="clave3"></select>
+    <select name="" id="clave4"></select>
+    <select name="" id="clave5"></select>
+    <select name="" id="clave6"></select>
+    <input type="button" value="Ejemplo 1" onclick="ejemplo1()">
+    <input type="button" value="Ejemplo 2" onclick="ejemplo2()">
+    <input type="button" value="Limpiar" onclick="limpiar1()">
+    <input type="button" value="Encriptar" onclick="encriptar()">
+    <input type="button" value="Guardar multiclave" onclick="guardarClave()">
+    <input type="button" value="Guardar texto encriptado" onclick="guardarMensaje()"><br>
+    <p>Mensaje encriptado:</p>
+    <textarea name="" id="mensajeEncriptado" rows="20" readonly></textarea><br>
+</body>
+</html>
